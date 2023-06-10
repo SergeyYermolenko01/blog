@@ -1,0 +1,14 @@
+<div *ngIf="listPage">
+<div *ngFor="let blog of blogs">
+  <b>{{blog.title}}</b> {{blog.text}}
+</div>
+<button (click)="newArticle()">Новий запис</button>
+</div>
+<div *ngIf="newPage">
+<div>Назва:<input id="title" type="text"></div>
+<div><textarea id="text" cols="100" rows="5"></textarea></div>
+<!--
+<div>Логін:<input id="login" type="text">Пароль:<input id="password" type="password"></div>
+-->
+<button (click)="saveArticle()">Записати</button>
+</div>
